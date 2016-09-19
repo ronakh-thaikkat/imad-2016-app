@@ -18,21 +18,62 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
+var articleOne = {
+    head: "This is article one"
+};
+
+var articleTwo = {
+    head: "This is article two"
+};
+
+var articleThree = {
+    head: "This is article three"
+};
+
+function createTemplate(data){
+    var head = data.head;
+    
+    var htmlTemplate = `
+    <html>
+    <head>
+        <title><h1> ${head} </h1></title>
+        <meta name = "viewport" content="width=device-width, intial-scale = 1"/>
+        <link href = "ui/style.css" rel="stylesheet" />
+    </head>
+        <body>
+          <div class = 'container'>
+            <div>
+                <a href= '/'>Home</a>
+            </div>
+            <hr/>
+            <h3>This is Article one</h3>
+            <div>
+                <p> This is some random text that you are reading, i dont know what
+                it means tho. Just pretend it makes some sense you scum.</p>
+            </div>
+          </div>
+        </body>
+</html>
+`;
+return htmlTemplate;  
+}
+
+
 app.get('/Article-one', function(req, res){
     
-    res.sendFile(path.join(__dirname, 'ui', 'Article-one.html'));
+    res.send(createTemplate(articleOne));
 
 });
 
 
 app.get('/Article-two', function(req, res){
     
-    res.send('Article two is served here');
+    res.send(createTemplate(articleTwo));
 });
 
 app.get('Article-three', function(req, res){
     
-    res.send('Article three is served here');
+    res.send(createTemplate(articleThree));
 });
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
 app.listen(8080, function () {
