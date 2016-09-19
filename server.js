@@ -39,7 +39,7 @@ var articleThree = {
 
 function createTemplate(data){
     var head = data.head;
-    var text = data.text 
+    var text = data.text;
     var htmlTemplate = `
     <html>
     <head>
