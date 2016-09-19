@@ -22,19 +22,19 @@ var articles = {
  'article-One' : {
     top: "This is article one",
     text: "This contains random stuff that dont make any sense and this is from"
-           + "article one"
+           + " article one"
  },
  
  'article-Two' : {
     top: "This is article two",
     text: "This contains random stuff that dont make any sense and this is from"
-           + "article two"
+           + " article two"
  },
 
  'article-Three' : {
     top: "This is article three",
     text: "This contains random stuff that dont make any sense and this is from"
-           + "article three"
+           + " article three"
  }
 };
 function createTemplate(data){
@@ -43,7 +43,7 @@ function createTemplate(data){
     var htmlTemplate = `
     <html>
     <head>
-        <title><h1> ${top} </h1></title>
+        <title><h1> Hello There </h1></title>
         <meta name = "viewport" content="width=device-width, intial-scale = 1"/>
         <link href = "ui/style.css" rel="stylesheet" />
     </head>
@@ -53,7 +53,7 @@ function createTemplate(data){
                 <a href= '/'>Home</a>
             </div>
             <hr/>
-            <h3>This is Article one</h3>
+            <h3> ${top}</h3>
             <div>
                 <p> ${text}</p>
             </div>
