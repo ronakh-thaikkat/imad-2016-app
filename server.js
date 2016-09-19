@@ -19,19 +19,19 @@ app.get('/ui/madi.png', function (req, res) {
 });
 
 var articles = {
-articleOne : {
+ 'article-One' : {
     top: "This is article one",
     text: "This contains random stuff that dont make any sense and this is from"
            + "article one"
  },
  
-articleTwo : {
+ 'article-Two' : {
     top: "This is article two",
     text: "This contains random stuff that dont make any sense and this is from"
            + "article two"
  },
 
-articleThree : {
+ 'article-Three' : {
     top: "This is article three",
     text: "This contains random stuff that dont make any sense and this is from"
            + "article three"
