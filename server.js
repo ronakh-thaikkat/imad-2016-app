@@ -20,25 +20,25 @@ app.get('/ui/madi.png', function (req, res) {
 
 var articles = {
 articleOne : {
-    head: "This is article one",
+    top: "This is article one",
     text: "This contains random stuff that dont make any sense and this is from"
            + "article one"
  },
  
 articleTwo : {
-    head: "This is article two",
+    top: "This is article two",
     text: "This contains random stuff that dont make any sense and this is from"
            + "article two"
  },
 
 articleThree : {
-    head: "This is article three",
+    top: "This is article three",
     text: "This contains random stuff that dont make any sense and this is from"
            + "article three"
  }
 };
 function createTemplate(data){
-    var head = data.head;
+    var top = data.top;
     var text = data.text;
     var htmlTemplate = `
     <html>
