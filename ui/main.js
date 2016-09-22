@@ -10,11 +10,10 @@ myElement.style.backgroundColor = "#D93600";  */
 
 var pictureElement = document.getElementById('picture');
 
-
-var interval = setInterval(moveRight , 50);
 var marginLeft = 0;
 var moveRight = function() {
     var marginLength = marginLeft + 10;
     picture.style.marginLength = marginLeft + "px";
 };
 
+var interval = setInterval(moveRight , 50);
