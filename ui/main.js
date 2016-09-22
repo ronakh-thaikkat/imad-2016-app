@@ -1,13 +1,20 @@
 console.log('Loaded!');
 //make the image move
+/*  Every HTML element that you access via JavaScript has a style object. This 
+object allows you to specify a CSS property and set its value. For example, 
+this is what setting the background color of an HTML element whose id value is
+superman looks like:
+var myElement = document.querySelector("#superman");
+myElement.style.backgroundColor = "#D93600";  */
+
 
 var pictureElement = document.getElementById('picture');
 
 
 var interval = setInterval(moveRight , 50);
-var marginLength = 0;
+var marginLeft = 0;
 var moveRight = function() {
-    var marginLength = marginLength + 10;
-    picture.style.marginLength = marginLength + "px";
+    var marginLength = marginLeft + 10;
+    picture.style.marginLength = marginLeft + "px";
 };
 
