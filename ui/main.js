@@ -12,10 +12,10 @@ var pictureElement = document.getElementById('picture');
 
 var marginLeft = 0;
 function moveRight() {
-    var marginLeft = marginLeft + 50;
+    var marginLeft = marginLeft + 10;
     pictureElement.style.marginLeft = marginLeft + 'px';
 }
 
 pictureElement.onclick = function(){
- var interval = setInterval(moveRight , 100);
+ var interval = setInterval(moveRight, 50);
 };
