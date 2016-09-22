@@ -13,7 +13,7 @@ var pictureElement = document.getElementById('picture');
 var marginLeft = 0;
 function moveRight() {
     var marginLeft = marginLeft + 50;
-    pictureElement.style.marginLeft = marginLeft + "px";
+    pictureElement.style.marginLeft = marginLeft + 'px';
 }
 
 pictureElement.onclick = function(){
