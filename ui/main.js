@@ -15,5 +15,8 @@ request.onreadychangestate = function(){
       var span = document.getELementById('span');
       span.innerHTML = counter.toString();
     }
-};
 
+
+ request.open('GET', 'http://ronakh-thaikkat.imad.hasura-app.io/counter', true);
+ request.send(null);
+};
