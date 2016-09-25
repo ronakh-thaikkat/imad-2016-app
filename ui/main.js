@@ -38,6 +38,7 @@ button.onclick = function(){
             if(request.readtState === 200 && request.status === 200){
                 var list = '';
                 var names = request.responseText;
+                names = JSON.parse(names);
                 for(i = 0; i < names.length; i ++){
                     list += '<li>' + names[i] + '</li>';
                 }
@@ -46,5 +47,6 @@ button.onclick = function(){
             }
         };
         
-        request.open('GET', '')
+    request.open('GET', 'http://ronakh-thaikkat.imad.hasura-app.io/submit-name?name=' + inputName, true); //value from input box 
+    request.send(null);
 };
