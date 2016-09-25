@@ -26,13 +26,14 @@ var request = new XMLHttpRequest();
  request.send(null);
 };
 
-var nameInput = document.getElementById('inputBox');
-var inputName = nameInput.value;
-var button = document.getElementById('inputButton');
+
 
 //create a function and request when clicked on the button
 
 button.onclick = function(){
+    var nameInput = document.getElementById('inputBox');
+    var inputName = nameInput.value;
+    var button = document.getElementById('inputButton');
     var request = new XMLHttpRequest();
         request.onreadychangestate = function(){
             if(request.readtState === 200 && request.status === 200){
