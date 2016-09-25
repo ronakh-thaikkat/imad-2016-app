@@ -30,21 +30,22 @@ var request = new XMLHttpRequest();
 
 //create a function and request when clicked on the button
 
-button.onclick = function(){
+button1.onclick = function(){
     var nameInput = document.getElementById('inputBox');
     var inputName = nameInput.value;
     var button = document.getElementById('inputButton');
     var request = new XMLHttpRequest();
+     var list = '';
         request.onreadychangestate = function(){
-            if(request.readtState === 200 && request.status === 200){
-                var list = '';
-                var names = request.responseText;
-                names = JSON.parse(names);
-                for(i = 0; i < names.length; i ++){
-                    list += '<li>' + names[i] + '</li>';
+          if(request.readtState === XMLHttpRequest.DONE && request.status === 200){
+               
+             var names = request.responseText;
+             names = JSON.parse(names);
+              for(i = 0; i < names.length; i ++){
+                  list += '<li>' + names[i] + '</li>';
                 }
-                var ui = document.getElementById('nameList');
-                ui.innerHTML = list;
+               var ui = document.getElementById('nameList');
+               ui.innerHTML = list;
             }
         };
         
