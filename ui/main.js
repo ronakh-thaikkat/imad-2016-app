@@ -25,3 +25,26 @@ var request = new XMLHttpRequest();
  request.open('GET', 'http://ronakh-thaikkat.imad.hasura-app.io/counter', true);
  request.send(null);
 };
+
+var nameInput = document.getElementById('inputBox');
+var inputName = nameInput.value;
+var button = document.getElementById('inputButton');
+
+//create a function and request when clicked on the button
+
+button.onclick = function(){
+    var request = new XMLHttpRequest();
+        request.onreadychangestate = function(){
+            if(request.readtState === 200 && request.status === 200){
+                var list = '';
+                var names = request.responseText;
+                for(i = 0; i < names.length; i ++){
+                    list += '<li>' + names[i] + '</li>';
+                }
+                var ui = document.getElementById('nameList');
+                ui.innerHTML = list;
+            }
+        };
+        
+        request.open('GET', '')
+};
