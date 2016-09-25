@@ -25,7 +25,7 @@ app.get('/ui/main.js', function (req, res) {
 
 app.get('/counter', function(req,res){
     counter = counter + 1;
-    req.send(counter.toString());
+    res.send(counter.toString());
 });
 
 var articles = {
