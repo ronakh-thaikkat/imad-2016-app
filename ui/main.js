@@ -12,7 +12,7 @@ var request = new XMLHttpRequest();
 request.onreadychangestate = function(){
     if(request.readyState === XMLHttpRequest.DONE && request.status === 200){
       var counter = request.responseText;
-      var span = document.getELementById('span');
+      var span = document.getELementById('count');
       span.innerHTML = counter.toString();
     }
 
