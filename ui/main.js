@@ -7,6 +7,10 @@ superman looks like:
 var myElement = document.querySelector("#superman");
 myElement.style.backgroundColor = "#D93600";  */
 
+var button = document.getElementById('btn');
+
+
+button.onclick = function(){
 
 var request = new XMLHttpRequest();
  request.onreadychangestate = function(){
@@ -17,6 +21,7 @@ var request = new XMLHttpRequest();
        span.innerHTML = counter.toString();
      }
     }
+ };
  request.open('GET', 'http://ronakh-thaikkat.imad.hasura-app.io/counter', true);
  request.send(null);
 };
