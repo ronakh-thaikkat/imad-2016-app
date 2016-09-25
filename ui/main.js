@@ -8,23 +8,12 @@ var myElement = document.querySelector("#superman");
 myElement.style.backgroundColor = "#D93600";  */
 
 
-var pictureElement = document.getElementById('picture');
-
-var marginLeft = 0;
-function moveRight() {
-    var marginLeft = marginLeft + 10;
-    pictureElement.style.marginLeft = marginLeft + 'px';
-}
-
-pictureElement.onclick = function(){
- var interval = setInterval(moveRight, 50);
+var request = new XMLHttpRequest();
+request.onreadychangestate = function(){
+    if(request.readyState === XMLHttpRequest.DONE && request.status === 200){
+      var counter = request.responseText;
+      var span = document.getELementById('span');
+      span.innerHTML = counter.toString();
+    }
 };
 
-var buttonClick = document.getElementById('btn');
-buttonClick.onclick = function(){
-    var counter = 0;
-    counter = counter + 1;
-    var span = document.getElementById('span');
-    span.innerHTML = counter.toString();
-    
-}
