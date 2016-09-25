@@ -19,3 +19,12 @@ function moveRight() {
 pictureElement.onclick = function(){
  var interval = setInterval(moveRight, 50);
 };
+
+var buttonClick = document.getElementById('btn');
+buttonClick.onclick = function(){
+    var counter = 0;
+    counter = counter + 1;
+    var span = getElementById('span');
+    span.innerHTML = counter.toString();
+    
+}
