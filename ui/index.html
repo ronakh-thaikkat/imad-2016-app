@@ -12,22 +12,19 @@
             Hi! I am your webapp.
         </div>
         <hr/>
-        <button type = "button" id="btn">click me</button> has been clicked 
+        <div class ="footer">
+            <button type = "button" id="btn">click me</button> has been clicked 
                                     <span id = "count">0</span> times
-        <br/>
-        <script>
-          var pictureElement = document.getElementById('picture');
-
-          var marginLeft = 0;
-          function moveRight() {
-          var marginLeft = marginLeft + 10;
-          pictureElement.style.marginLeft = marginLeft + 'px';
-        }
-
-        pictureElement.onclick = function(){
-       var interval = setInterval(moveRight, 50);
-      };
-    </script>
+            <br/>
+            <input type = "text" id = "inputBox" placeholder = "name">
+            <input type = "Button" id = "inputButton" value = "Submit">
+            <ul>
+                <li>name1</li>
+                <li>name2</li>
+                <li>name3</li>
+            </ul>
+            <br/>
+        </div>
     <script type="text/javascript" src="/ui/main.js">
       </script>
     </body>
