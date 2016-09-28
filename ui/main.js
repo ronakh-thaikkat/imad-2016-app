@@ -37,7 +37,7 @@ button1.onclick = function(){
     var request = new XMLHttpRequest();
      var list = '';
         request.onreadychangestate = function(){
-          if(request.readtState === XMLHttpRequest.DONE && request.status === 200){
+          if(request.readyState === XMLHttpRequest.DONE && request.status === 200){
                
              var names = request.responseText;
              names = JSON.parse(names);
