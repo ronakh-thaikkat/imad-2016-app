@@ -27,7 +27,7 @@ var request = new XMLHttpRequest();
 
 
 //create a function and request when clicked on the button
-var button1 = document.getElementById("btn");
+var button1 = document.getElementById("inputButton");
 button1.onclick = function(){
     var nameInput = document.getElementById('inputBox');
     var inputName = nameInput.value;
