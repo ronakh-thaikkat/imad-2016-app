@@ -31,7 +31,6 @@ var button1 = document.getElementById("inputButton");
 button1.onclick = function(){
     var nameInput = document.getElementById('inputBox');
     var inputName = nameInput.value;
-    var button = document.getElementById('inputButton');
     var request = new XMLHttpRequest();
      var list = '';
         request.onreadychangestate = function(){
