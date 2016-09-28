@@ -16,8 +16,7 @@ var request = new XMLHttpRequest();
  request.onreadychangestate = function(){
     if(request.readyState === XMLHttpRequest.DONE) {
       if(request.status === 200){
-       var counter = request.responseText;
-       document.getElementById('count').innerHTML= 'counter';
+      document.getElementById('count').innerHTML= 'this.responseText';
      }
     }
  };
